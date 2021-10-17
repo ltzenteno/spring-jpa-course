@@ -3,7 +3,7 @@ spring:
     url: jdbc:h2:mem:testdb;DB_CLOSE_DELAY=-1;DATABASE_TO_UPPER=false;DB_CLOSE_ON_EXIT=FALSE;MODE=PostgreSQL;INIT=CREATE SCHEMA IF NOT EXISTS testdb;
     driverClassName: org.h2.Driver
     username: sa
-    password: secret
+    password:
     hikari:
       schema: testdb
   jpa:
@@ -21,6 +21,6 @@ spring:
     locations: classpath:db/migration
     url: jdbc:h2:mem:testdb
     user: sa
-    password: secret
+    password:
     schemas: testdb
     baseline-on-migrate: true

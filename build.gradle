@@ -1,6 +1,7 @@
 plugins {
 	id 'org.springframework.boot' version '2.5.5'
 	id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+	id "org.flywaydb.flyway" version "8.0.1"
 	id 'java'
 }
 
@@ -22,6 +23,13 @@ dependencies {
 	compileOnly 'org.projectlombok:lombok'
 
 	annotationProcessor 'org.projectlombok:lombok'
+}
+
+flyway {
+	url = 'jdbc:h2:mem:testdb'
+	user = 'sa'
+	password = ''
+	schemas = ['testdb']
 }
 
 test {
