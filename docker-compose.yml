@@ -1,0 +1,22 @@
+version: '3'
+
+services:
+  db:
+    container_name: db_spring_data_jpa
+    image: postgres:12.3
+    restart: unless-stopped
+    ports:
+      - '5432:5432'
+    env_file: ./.env
+    volumes:
+      - 'postgres_data:/var/lib/postgresql/data/'
+    networks:
+      - backend-network
+
+volumes:
+  postgres_data:
+    driver: local
+
+networks:
+  backend-network:
+    driver: bridge

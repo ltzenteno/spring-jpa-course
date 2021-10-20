@@ -18,6 +18,7 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
 	implementation 'org.flywaydb:flyway-maven-plugin:7.15.0'
 	runtimeOnly 'com.h2database:h2'
+	runtimeOnly 'org.postgresql:postgresql'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	developmentOnly 'org.springframework.boot:spring-boot-devtools'
 	compileOnly 'org.projectlombok:lombok'
@@ -26,10 +27,10 @@ dependencies {
 }
 
 flyway {
-	url = 'jdbc:h2:mem:testdb'
-	user = 'sa'
-	password = ''
-	schemas = ['testdb']
+	url = 'jdbc:postgresql://localhost:5432/test_spring_jpa'
+	user = 'postgres'
+	password = 'supersecret'
+	schemas = ['test_db']
 }
 
 test {
