@@ -9,6 +9,8 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+import java.util.List;
+
 @SpringBootApplication
 public class JpaCourseApplication implements CommandLineRunner {
 
@@ -22,8 +24,7 @@ public class JpaCourseApplication implements CommandLineRunner {
 	}
 
 	public void run(String ...arg0) throws Exception {
-		Course course = this.courseRepository.findById(1L);
-
-		logger.info("Course 1 => {}", course);
+		List<Course> list = this.courseRepository.findAll();
+		logger.info("Courses => {}", list);
 	}
 }
