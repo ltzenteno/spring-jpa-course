@@ -6,8 +6,15 @@
 
 ### Flyway
 
-- use JPA Buddy to create diff migrations
+- use JPA Buddy to create diff migrations (show DDL... option, then copy it inside a new `sql` migration file) 👍
 
-To run new migrations
+_NOTE: careful with how it creates DDL, `id` must be of type `SERIAL` instead of `INT`_
 
-    ./gradlew flywayMigrate -i
+
+- To check migration info (which have been applied, which are pending):
+
+      ./gradlew flywayInfo
+
+- To run new migrations
+
+      ./gradlew flywayMigrate -i
