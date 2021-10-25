@@ -1,6 +1,6 @@
-package org.ltz.repository;
+package org.ltz.courses.repository;
 
-import org.ltz.entity.Course;
+import org.ltz.courses.entity.Course;
 
 import java.util.List;
 

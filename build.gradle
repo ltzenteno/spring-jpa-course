@@ -26,6 +26,7 @@ dependencies {
 	annotationProcessor 'org.projectlombok:lombok'
 }
 
+// TODO: how to set the following variables from an external .env ...?
 flyway {
 	url = 'jdbc:postgresql://localhost:5432/test_spring_jpa'
 	user = 'postgres'

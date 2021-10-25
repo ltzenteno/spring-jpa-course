@@ -1,7 +1,7 @@
 package org.ltz;
 
-import org.ltz.entity.Course;
-import org.ltz.repository.CourseRepository;
+import org.ltz.courses.entity.Course;
+import org.ltz.courses.repository.CourseRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -1,6 +1,6 @@
-package org.ltz.repository;
+package org.ltz.courses.repository;
 
-import org.ltz.entity.Course;
+import org.ltz.courses.entity.Course;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 

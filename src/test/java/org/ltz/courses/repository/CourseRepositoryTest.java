@@ -1,9 +1,9 @@
-package org.ltz.repository;
+package org.ltz.courses.repository;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.ltz.JpaCourseApplication;
-import org.ltz.entity.Course;
+import org.ltz.courses.entity.Course;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,7 +14,7 @@ import java.util.Optional;
 @SpringBootTest(classes = JpaCourseApplication.class)
 class CourseRepositoryTest {
 
-    private Logger logger = LoggerFactory.getLogger(CourseRepositoryTest.class);
+    private final Logger logger = LoggerFactory.getLogger(CourseRepositoryTest.class);
 
     @Autowired
     private CourseRepository courseRepository;

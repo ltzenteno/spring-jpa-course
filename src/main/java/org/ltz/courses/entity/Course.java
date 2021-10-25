@@ -1,4 +1,4 @@
-package org.ltz.entity;
+package org.ltz.courses.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
