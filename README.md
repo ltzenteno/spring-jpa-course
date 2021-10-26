@@ -1,8 +1,11 @@
-### H2 Console
+### Local Setup
 
-[http://localhost:8080/h2-console](http://localhost:8080/h2-console)
+    docker-compose up -d
 
-[http://www.h2database.com/html/features.html#connection_modes](http://www.h2database.com/html/features.html#connection_modes)
+    docker cp db.sql db_spring_data_jpa:/db.sql
+
+    docker exec -it db_spring_data_jpa psql -U postgres test_spring_jpa -a -f /db.sql
+
 
 ### Flyway
 
