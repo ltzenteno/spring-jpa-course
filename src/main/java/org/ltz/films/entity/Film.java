@@ -13,7 +13,6 @@ import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.Lob;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import java.io.Serializable;
@@ -38,7 +37,6 @@ public class Film implements Serializable {
     private BigDecimal rentalRate;
 
     @Column(name = "release_year")
-    @Lob
     private String releaseYear;
 
     @ToString.Exclude

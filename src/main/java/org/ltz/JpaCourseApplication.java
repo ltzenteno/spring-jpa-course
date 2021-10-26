@@ -2,6 +2,8 @@ package org.ltz;
 
 import org.ltz.courses.entity.Course;
 import org.ltz.courses.repository.CourseRepository;
+import org.ltz.films.entity.Film;
+import org.ltz.films.repository.FilmRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,12 +21,18 @@ public class JpaCourseApplication implements CommandLineRunner {
 	@Autowired
 	private CourseRepository courseRepository;
 
+	@Autowired
+	private FilmRepository filmRepository;
+
 	public static void main(String[] args) {
 		SpringApplication.run(JpaCourseApplication.class, args);
 	}
 
 	public void run(String ...arg0) throws Exception {
 		List<Course> list = this.courseRepository.findAll();
-		logger.info("Courses => {}", list);
+		logger.info("Courses; {}", list);
+
+		Film film = this.filmRepository.findByIdWithCategories(1L);
+		logger.info("Film: {}", film);
 	}
 }
