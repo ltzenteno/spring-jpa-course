@@ -24,6 +24,7 @@ dependencies {
 	compileOnly 'org.projectlombok:lombok'
 
 	annotationProcessor 'org.projectlombok:lombok'
+	annotationProcessor 'org.hibernate:hibernate-jpamodelgen'
 }
 
 // TODO: how to set the following variables from an external .env ...?
